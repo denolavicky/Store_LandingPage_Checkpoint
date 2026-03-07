@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Furniture Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    
+   <!-- HEADER -->
+<header class="flex items-center justify-between px-10 py-5 bg-white shadow-sm">
+
+  <!-- Logo -->
+  <h1 class="text-2xl font-bold text-gray-800">FurniCo</h1>
+
+  <!-- Desktop Nav -->
+  <nav id="desktop-nav" class="flex gap-8 items-center">
+    <a href="#hero" class="text-gray-600 hover:text-black">Home</a>
+    <a href="#products" class="text-gray-600 hover:text-black">Products</a>
+    <a href="#testimonials" class="text-gray-600 hover:text-black">Testimonials</a>
+    <a href="#contact" class="bg-gray-800 text-white px-5 py-2 rounded hover:bg-gray-600">Contact</a>
+  </nav>
+
+  <!-- Hamburger Button (mobile only) -->
+  <button id="hamburger" onclick="toggleMenu()">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+    </svg>
+  </button>
+
+  <!-- Mobile Dropdown Nav -->
+  <nav id="mobile-nav" class="flex flex-col gap-4 px-6 py-5 bg-white shadow-md">
+    <a href="#hero" onclick="toggleMenu()" class="text-gray-600 hover:text-black text-sm">Home</a>
+    <a href="#products" onclick="toggleMenu()" class="text-gray-600 hover:text-black text-sm">Products</a>
+    <a href="#testimonials" onclick="toggleMenu()" class="text-gray-600 hover:text-black text-sm">Testimonials</a>
+    <a href="#contact" onclick="toggleMenu()" class="bg-gray-800 text-white px-5 py-2 rounded hover:bg-gray-600 text-sm w-fit">Contact</a>
+  </nav>
+
+</header>
+    <main>
+      <!-- HERO / BANNER -->
+      <section
+        id="hero"
+        class="flex items-center justify-between bg-stone-100 px-20 py-24"
+      >
+        <!-- Left: Text Content -->
+        <div class="flex flex-col max-w-lg">
+          <p class="text-gray-400 uppercase tracking-widest text-sm mb-3">
+            New Collection 2024
+          </p>
+          <h2 class="text-5xl font-bold text-gray-800 leading-tight mb-5">
+            Modern Furniture for<br />Modern Living
+          </h2>
+          <p class="text-gray-500 text-base mb-8">
+            Discover timeless pieces that bring comfort, style, and elegance to
+            every room in your home.
+          </p>
+          <a
+            href="#products"
+            class="bg-gray-800 text-white px-8 py-3 rounded hover:bg-gray-600 w-fit"
+          >
+            Shop Now
+          </a>
+        </div>
+
+        <!-- Right: Furniture Image -->
+        <div class="w-1/2">
+          <img
+            src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800"
+            alt="Modern Furniture"
+            class="rounded-2xl shadow-lg w-full object-cover h-96"
+          />
+        </div>
+      </section>
+
+      <!-- PRODUCTS SECTION -->
+      <section id="products" class="px-20 py-24 bg-white">
+        <!-- Section Title -->
+        <div class="text-center mb-14">
+          <p class="text-gray-400 uppercase tracking-widest text-sm mb-2">
+            Our Collection
+          </p>
+          <h2 class="text-4xl font-bold text-gray-800">Featured Products</h2>
+        </div>
+
+        <!-- Product Cards Grid -->
+        <div class="grid grid-cols-4 gap-8">
+          <!-- Card 1 -->
+          <div
+            class="bg-stone-50 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-500 ease-in-out hover:-translate-y-1"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=400"
+              alt="Sofa"
+              class="w-full h-56 object-cover"
+            />
+            <div class="p-7">
+              <h3 class="text-lg font-semibold text-gray-800 mb-2">
+                Nordic Sofa
+              </h3>
+              <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+                A clean minimal sofa perfect for modern living rooms.
+              </p>
+              <a
+                href="#"
+                class="bg-gray-800 text-white text-sm px-5 py-2 rounded hover:bg-gray-600"
+                >Shop Now</a
+              >
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="bg-stone-50 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-500 ease-in-out hover:-translate-y-1"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400"
+              alt="Chair"
+              class="w-full h-56 object-cover"
+            />
+            <div class="p-7">
+              <h3 class="text-lg font-semibold text-gray-800 mb-2">
+                Lounge Chair
+              </h3>
+              <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+                Ergonomic and stylish chair for your reading corner.
+              </p>
+              <a
+                href="#"
+                class="bg-gray-800 text-white text-sm px-5 py-2 rounded hover:bg-gray-600"
+                >Shop Now</a
+              >
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="bg-stone-50 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-500 ease-in-out hover:-translate-y-1"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1538688525198-9b88f6f53126?w=400"
+              alt="Table"
+              class="w-full h-56 object-cover"
+            />
+            <div class="p-7">
+              <h3 class="text-lg font-semibold text-gray-800 mb-2">
+                Oak Dining Table
+              </h3>
+              <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+                Solid oak table that brings warmth to your dining space.
+              </p>
+              <a
+                href="#"
+                class="bg-gray-800 text-white text-sm px-5 py-2 rounded hover:bg-gray-600"
+                >Shop Now</a
+              >
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            class="bg-stone-50 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-500 ease-in-out hover:-translate-y-1"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=400"
+              alt="Shelf"
+              class="w-full h-56 object-cover"
+            />
+            <div class="p-7">
+              <h3 class="text-lg font-semibold text-gray-800 mb-2">
+                Minimal Shelf
+              </h3>
+              <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+                Wall-mounted shelf with a sleek and functional design.
+              </p>
+              <a
+                href="#"
+                class="bg-gray-800 text-white text-sm px-5 py-2 rounded hover:bg-gray-600"
+                >Shop Now</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS SECTION -->
+<section id="testimonials" class="px-20 py-24 bg-stone-100">
+
+  <!-- Section Title -->
+  <div class="text-center mb-14">
+    <p class="text-gray-400 uppercase tracking-widest text-sm mb-2">Happy Customers</p>
+    <h2 class="text-4xl font-bold text-gray-800">What They Say</h2>
+  </div>
+
+  <!-- Testimonial Cards Grid -->
+  <div class="grid grid-cols-3 gap-8">
+
+    <!-- Card 1 -->
+    <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-500 ease-in-out">
+      <!-- Stars -->
+      <div class="flex gap-1 mb-5">
+        <span class="text-yellow-400">★</span>
+        <span class="text-yellow-400">★</span>
+        <span class="text-yellow-400">★</span>
+        <span class="text-yellow-400">★</span>
+        <span class="text-yellow-400">★</span>
+      </div>
+      <!-- Quote -->
+      <p class="text-gray-500 text-sm leading-relaxed mb-6">"Absolutely love my new Nordic Sofa. The quality is outstanding and it fits perfectly in my living room. Will definitely be ordering again!"</p>
+      <!-- Customer -->
+      <div class="flex items-center gap-4">
+        <div class="w-10 h-10 rounded-full bg-gray-300 flex items-center justify-center text-white font-bold text-sm">S</div>
+        <div>
+          <h4 class="text-gray-800 font-semibold text-sm">Sarah Johnson</h4>
+          <p class="text-gray-400 text-xs">Lagos, Nigeria</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-500 ease-in-out">
+      <!-- Stars -->
+      <div class="flex gap-1 mb-5">
+        <span class="text-yellow-400">★</span>
+        <span class="text-yellow-400">★</span>
+        <span class="text-yellow-400">★</span>
+        <span class="text-yellow-400">★</span>
+        <span class="text-yellow-400">★</span>
+      </div>
+      <!-- Quote -->
+      <p class="text-gray-500 text-sm leading-relaxed mb-6">"The Oak Dining Table exceeded my expectations. Beautiful craftsmanship and delivered right on time. My family loves it!"</p>
+      <!-- Customer -->
+      <div class="flex items-center gap-4">
+        <div class="w-10 h-10 rounded-full bg-gray-300 flex items-center justify-center text-white font-bold text-sm">M</div>
+        <div>
+          <h4 class="text-gray-800 font-semibold text-sm">Michael Adewale</h4>
+          <p class="text-gray-400 text-xs">Abuja, Nigeria</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-500 ease-in-out">
+      <!-- Stars -->
+      <div class="flex gap-1 mb-5">
+        <span class="text-yellow-400">★</span>
+        <span class="text-yellow-400">★</span>
+        <span class="text-yellow-400">★</span>
+        <span class="text-yellow-400">★</span>
+        <span class="text-gray-300">★</span>
+      </div>
+      <!-- Quote -->
+      <p class="text-gray-500 text-sm leading-relaxed mb-6">"Great minimal shelf, looks exactly like the pictures. The setup was easy and the finish is really clean. Very happy with my purchase."</p>
+      <!-- Customer -->
+      <div class="flex items-center gap-4">
+        <div class="w-10 h-10 rounded-full bg-gray-300 flex items-center justify-center text-white font-bold text-sm">A</div>
+        <div>
+          <h4 class="text-gray-800 font-semibold text-sm">Amina Bello</h4>
+          <p class="text-gray-400 text-xs">Kano, Nigeria</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="px-20 py-24 bg-white">
+
+  <!-- Section Title -->
+  <div class="text-center mb-14">
+    <p class="text-gray-400 uppercase tracking-widest text-sm mb-2">Get In Touch</p>
+    <h2 class="text-4xl font-bold text-gray-800">Contact Us</h2>
+  </div>
+
+  <!-- Contact Container -->
+  <div class="flex gap-16 max-w-5xl mx-auto">
+
+    <!-- Left: Contact Info -->
+    <div class="flex flex-col gap-8 w-1/3">
+
+      <div>
+        <h4 class="text-gray-800 font-semibold mb-1">Address</h4>
+        <p class="text-gray-400 text-sm leading-relaxed">12 Furniture Lane, Wuse Zone 5, Abuja, Nigeria</p>
+      </div>
+
+      <div>
+        <h4 class="text-gray-800 font-semibold mb-1">Email</h4>
+        <p class="text-gray-400 text-sm">hello@furnico.com</p>
+      </div>
+
+      <div>
+        <h4 class="text-gray-800 font-semibold mb-1">Phone</h4>
+        <p class="text-gray-400 text-sm">+234 801 234 5678</p>
+      </div>
+
+      <div>
+        <h4 class="text-gray-800 font-semibold mb-1">Hours</h4>
+        <p class="text-gray-400 text-sm leading-relaxed">Mon – Fri: 9am – 6pm<br/>Sat: 10am – 4pm</p>
+      </div>
+
+    </div>
+
+    <!-- Right: Contact Form -->
+    <div class="flex flex-col gap-5 w-2/3">
+
+      <!-- Name & Email Row -->
+      <div class="flex gap-5">
+        <input 
+          type="text" 
+          placeholder="Your Name" 
+          class="w-1/2 border border-gray-200 rounded-xl px-5 py-3 text-sm text-gray-700 outline-none focus:border-gray-400 transition-all duration-300"
+        />
+        <input 
+          type="email" 
+          placeholder="Your Email" 
+          class="w-1/2 border border-gray-200 rounded-xl px-5 py-3 text-sm text-gray-700 outline-none focus:border-gray-400 transition-all duration-300"
+        />
+      </div>
+
+      <!-- Subject -->
+      <input 
+        type="text" 
+        placeholder="Subject" 
+        class="border border-gray-200 rounded-xl px-5 py-3 text-sm text-gray-700 outline-none focus:border-gray-400 transition-all duration-300"
+      />
+
+      <!-- Message -->
+      <textarea 
+        placeholder="Your Message" 
+        rows="5"
+        class="border border-gray-200 rounded-xl px-5 py-3 text-sm text-gray-700 outline-none focus:border-gray-400 transition-all duration-300 resize-none"
+      ></textarea>
+
+      <!-- Submit Button -->
+      <button class="bg-gray-800 text-white px-8 py-3 rounded-xl hover:bg-gray-600 transition-all duration-300 w-fit">
+        Send Message
+      </button>
+
+    </div>
+  </div>
+</section>
+
+    </main>
+
+    
+        <!-- FOOTER -->
+<footer id="footer" class="bg-gray-900 text-white px-20 py-16">
+
+  <!-- Top: 4 Columns -->
+  <div class="grid grid-cols-4 gap-12 mb-12">
+
+    <!-- Column 1: Brand -->
+    <div class="flex flex-col gap-4">
+      <h2 class="text-2xl font-bold">FurniCo</h2>
+      <p class="text-gray-400 text-sm leading-relaxed">Bringing modern, minimal furniture to homes across Nigeria and beyond.</p>
+    </div>
+
+    <!-- Column 2: Quick Links -->
+    <div class="flex flex-col gap-3">
+      <h4 class="font-semibold text-white mb-1">Quick Links</h4>
+      <a href="#hero" class="text-gray-400 text-sm hover:text-white transition-all duration-300">Home</a>
+      <a href="#products" class="text-gray-400 text-sm hover:text-white transition-all duration-300">Products</a>
+      <a href="#testimonials" class="text-gray-400 text-sm hover:text-white transition-all duration-300">Testimonials</a>
+      <a href="#contact" class="text-gray-400 text-sm hover:text-white transition-all duration-300">Contact</a>
+    </div>
+
+    <!-- Column 3: Contact Info -->
+    <div class="flex flex-col gap-3">
+      <h4 class="font-semibold text-white mb-1">Contact</h4>
+      <p class="text-gray-400 text-sm">hello@furnico.com</p>
+      <p class="text-gray-400 text-sm">+234 801 234 5678</p>
+      <p class="text-gray-400 text-sm leading-relaxed">12 Furniture Lane, Wuse Zone 5, Abuja, Nigeria</p>
+    </div>
+
+    <!-- Column 4: Social Media -->
+    <div class="flex flex-col gap-3">
+      <h4 class="font-semibold text-white mb-1">Follow Us</h4>
+      <a href="#" class="text-gray-400 text-sm hover:text-white transition-all duration-300">Instagram</a>
+      <a href="#" class="text-gray-400 text-sm hover:text-white transition-all duration-300">Twitter</a>
+      <a href="#" class="text-gray-400 text-sm hover:text-white transition-all duration-300">Facebook</a>
+      <a href="#" class="text-gray-400 text-sm hover:text-white transition-all duration-300">Pinterest</a>
+    </div>
+
+  </div>
+
+  <!-- Divider -->
+  <div class="border-t border-gray-700 mb-8"></div>
+
+  <!-- Bottom: Copyright -->
+  <div class="flex items-center justify-between">
+    <p class="text-gray-400 text-sm">© 2026 FurniCo. All rights reserved.</p>
+    <div class="flex gap-6">
+      <a href="#" class="text-gray-400 text-sm hover:text-white transition-all duration-300">Privacy Policy</a>
+      <a href="#" class="text-gray-400 text-sm hover:text-white transition-all duration-300">Terms of Service</a>
+    </div>
+  </div>
+
+
+    </footer>
+  </body>
+</html>
